@@ -1,0 +1,39 @@
+<%- include("header") -%>
+<header>
+  <div class="navbar navbar-light bg-light shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img src="images/landis_logo.png" width="20" height="20" style="margin-right: 10px" fill="none" alt="">
+        <strong>Landis</strong>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Statistics</h1>
+      <p class="lead text-muted">This page indicates the important statistics.</p>
+      <div class="page-buttons">
+        <a href="/clients" class="btn btn-light my-2">Client</a>
+        <a href="/statistics" class="btn btn-light my-2">Statistics</a>
+      </div>
+    </div>
+  </section>
+  <div class="chart">
+    <canvas id="lineChart">
+    </canvas>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<% var test = 101 %>
+<script src="/js/lineChart.js" charset="utf-8">
+  console.log(get_test);
+  var clientNames = <%=clientNames%>;
+  var mortagePercentages = <%=mortagePercentages%>;
+</script>
+
+<%- include("footer") -%>
